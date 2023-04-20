@@ -1,0 +1,65 @@
+\usepackage[xetex,
+    pdfstartview=FitH,
+    bookmarksnumbered=true,
+    bookmarksopen=true,
+    hyperfootnotes=true,
+    colorlinks,
+    linkcolor=black,
+    urlcolor=black,
+    filecolor=black,
+    anchorcolor=black,
+    citecolor=black,
+    menucolor=black,
+]{hyperref}
+\hypersetup{unicode}
+\def\pdfpagew{\TexPageWidth}
+\def\pdfpageh{\TexPageHeight}
+\def\pdfpagel{简体中文}
+\def\pdfpagec{UTF-8}
+\geometry{papersize={\pdfpagew,\pdfpageh}}
+\geometry{
+    left=\TexLeftSpacing,
+    right=\TexSpaceOnRight,
+    top=\TexTopSpacing,
+    bottom=\TexBottomSpacing
+}
+\pagestyle{headings}
+\setlength{\headheight}{13pt}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\pagestyle{fancy}
+\lhead{\bfseries \TexTitle \\}
+\rhead{\bfseries \TexDate \TexTarget\TexTime\\}
+\lfoot{Page.{\thepage} of \pageref{LastPage}}
+\cfoot{}
+\rfoot{\bfseries \small{\TexExcitation}}
+\makeatletter
+\def\headrule{{
+    \if@fancyplain\let\headrulewidth\plainheadrulewidth\fi\hrule\@height 0pt \@width\headwidth\vskip0pt
+}}
+\makeatother
+\setlength{\skip\footins}{1.0cm}
+\renewcommand{\footnotesize}{}
+\renewcommand{\footrulewidth}{0pt}
+\parindent=0pt
+\parskip=3ex
+\setlength{\parindent}{0em}
+\renewcommand\thesection{\large \Roman{section}}
+\setlength{\columnsep}{\TexColumnSpacing}
+%设置正文字体为Book Antique
+\setmainfont{Arial}
+\newcommand{\hollowstar}{\text{\ding{73}}}
+\hypersetup{
+pdftitle={\TexTitle},        
+pdfsubject={},                     
+pdfauthor={个人使用分享，严谨任何商业用途},
+pdfkeywords={},
+pdfcreator={单词表生成工具，免费分享与使用},
+pdfproducer={作者：HorowitzP 联系QQ：1482044864},
+pdfstartview={Fit},
+pdfpagemode={UseNone},
+pdfstartpage={1}
+}
+\SetWatermarkText{\TexWatermark}
+\SetWatermarkLightness{0.8}
+\SetWatermarkScale{0.45}
